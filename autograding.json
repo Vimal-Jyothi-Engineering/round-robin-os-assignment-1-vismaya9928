@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "name": "Compile Program",
+      "run": "gcc rr.c -o rr",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Test Case 1",
+      "run": "./rr",
+      "input": "4\nP1 0 5\nP2 1 4\nP3 2 2\nP4 3 1\n2",
+      "output": "Waiting Time:\nP1 7\nP2 6\nP3 2\nP4 5\nTurnaround Time:\nP1 12\nP2 10\nP3 4\nP4 6\nAverage Waiting Time: 5.00\nAverage Turnaround Time: 8.00",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Test Case 2",
+      "run": "./rr",
+      "input": "3\nP1 0 6\nP2 1 4\nP3 2 2\n3",
+      "output": "Waiting Time:\nP1 6\nP2 5\nP3 1\nTurnaround Time:\nP1 12\nP2 9\nP3 3\nAverage Waiting Time: 4.00\nAverage Turnaround Time: 8.00",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Test Case 3",
+      "run": "./rr",
+      "input": "4\nP1 0 3\nP2 0 4\nP3 0 5\nP4 0 6\n2",
+      "output": "Waiting Time:\nP1 0\nP2 3\nP3 6\nP4 9\nTurnaround Time:\nP1 3\nP2 7\nP3 11\nP4 15\nAverage Waiting Time: 4.50\nAverage Turnaround Time: 9.00",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Test Case 4",
+      "run": "./rr",
+      "input": "2\nP1 2 5\nP2 4 3\n2",
+      "output": "Waiting Time:\nP1 2\nP2 3\nTurnaround Time:\nP1 7\nP2 6\nAverage Waiting Time: 2.50\nAverage Turnaround Time: 6.50",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Test Case 5",
+      "run": "./rr",
+      "input": "3\nP1 0 2\nP2 1 3\nP3 2 4\n1",
+      "output": "Waiting Time:\nP1 0\nP2 2\nP3 4\nTurnaround Time:\nP1 2\nP2 5\nP3 8\nAverage Waiting Time: 2.00\nAverage Turnaround Time: 5.00",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
